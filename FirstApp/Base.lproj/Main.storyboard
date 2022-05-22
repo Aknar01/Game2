@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ti2-cT-hLx" customClass="GameFieldView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="138" width="374" height="657"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shapeSize">
+                                        <size key="value" width="80" height="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний счет: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynl-KH-KOc">
+                                <rect key="frame" x="132" y="822" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvi-X0-98a" customClass="GameControlViewClass" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="86"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pvi-X0-98a" secondAttribute="trailing" constant="20" id="Pms-iw-IPn"/>
+                            <constraint firstItem="Ti2-cT-hLx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="138" id="Rzt-Ac-GU8"/>
+                            <constraint firstItem="Ynl-KH-KOc" firstAttribute="top" secondItem="Ti2-cT-hLx" secondAttribute="bottom" constant="27" id="Unj-2V-c1Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ti2-cT-hLx" secondAttribute="trailing" constant="20" id="Vze-TY-Tt4"/>
+                            <constraint firstItem="Ti2-cT-hLx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bax-R1-7Ug"/>
+                            <constraint firstItem="Pvi-X0-98a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="boQ-Cb-o5l"/>
+                            <constraint firstItem="Ynl-KH-KOc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iXU-1s-491"/>
+                            <constraint firstItem="Ti2-cT-hLx" firstAttribute="top" secondItem="Pvi-X0-98a" secondAttribute="bottom" constant="8" id="jEC-Rb-QwU"/>
+                            <constraint firstItem="Pvi-X0-98a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nQE-n2-8HM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ynl-KH-KOc" secondAttribute="bottom" constant="19" id="q0A-3D-QUy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameControl" destination="Pvi-X0-98a" id="exN-Ug-4Bh"/>
+                        <outlet property="gameFieldView" destination="Ti2-cT-hLx" id="o8z-sg-9Oc"/>
+                        <outlet property="scoreLabel" destination="Ynl-KH-KOc" id="NxU-wJ-cjk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OV6-PU-u8K">
+                    <connections>
+                        <action selector="objectTaped:" destination="BYZ-38-t0r" id="WCV-hK-oQl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

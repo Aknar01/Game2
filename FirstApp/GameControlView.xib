@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameControlViewClass" customModule="FirstApp" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="ObX-Eb-wEB" id="EM8-Cp-4lV"/>
+                <outlet property="stepper" destination="ew9-ld-orL" id="V4c-BU-0z4"/>
+                <outlet property="timeLabel" destination="lPr-HC-lqZ" id="Q7k-Kc-lcZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="151"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ew9-ld-orL">
+                    <rect key="frame" x="306" y="0.0" width="94" height="32"/>
+                    <connections>
+                        <action selector="stepperChanged:" destination="-1" eventType="valueChanged" id="SPg-lJ-eVk"/>
+                    </connections>
+                </stepper>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время :  30 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-HC-lqZ">
+                    <rect key="frame" x="0.0" y="6" width="121" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-Eb-wEB">
+                    <rect key="frame" x="164" y="120" width="72" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Начать"/>
+                    <connections>
+                        <action selector="actionButtonTapped:" destination="-1" eventType="touchUpInside" id="dg9-Wm-6GE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ew9-ld-orL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lPr-HC-lqZ" secondAttribute="trailing" constant="8" symbolic="YES" id="4Xn-BX-kXq"/>
+                <constraint firstItem="lPr-HC-lqZ" firstAttribute="centerY" secondItem="ew9-ld-orL" secondAttribute="centerY" id="DGB-Mf-ABu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ew9-ld-orL" secondAttribute="trailing" id="J52-ZA-xOY"/>
+                <constraint firstItem="ObX-Eb-wEB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qi5-Y9-heO"/>
+                <constraint firstItem="ew9-ld-orL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pJJ-oQ-SZs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ObX-Eb-wEB" secondAttribute="bottom" id="t06-LX-K84"/>
+                <constraint firstItem="lPr-HC-lqZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yEl-Nh-Y2p"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="88.405797101449281" y="-342.52232142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
